@@ -2,13 +2,11 @@ package com.codecool.petadoption.controllers;
 
 import com.codecool.petadoption.models.Pet;
 import com.codecool.petadoption.services.PetService;
+import com.codecool.petadoption.transfer.PetCreateDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -29,6 +27,21 @@ public class PetController {
             Optional<Pet> pet = petService.getPetById(id);
             return pet.map(value -> ResponseEntity.status(HttpStatus.OK).body(value))
                     .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
+    }
+
+    @PostMapping("/Create")
+    public ResponseEntity<Pet> createPet(@RequestBody PetCreateDto request) {
+        try {
+            Pet newPet = new Pet(request.type(), request.breed(), request.gender(), request.age());
+            boolean isCreated = petService.addPet(newPet);
+            if(isCreated) {
+                return ResponseEntity.status(HttpStatus.CREATED).body(newPet);
+            }else{
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+            }
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }

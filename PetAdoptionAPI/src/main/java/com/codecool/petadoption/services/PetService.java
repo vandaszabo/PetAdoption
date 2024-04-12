@@ -21,5 +21,10 @@ public class PetService {
         return petRepository.findById(id);
     }
 
+    public boolean addPet(Pet pet) {
+        Pet saved = petRepository.save(pet);
+        return saved != null;
+    }
+
 
 }
