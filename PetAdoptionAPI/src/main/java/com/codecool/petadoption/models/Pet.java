@@ -3,7 +3,11 @@ package com.codecool.petadoption.models;
 import com.codecool.petadoption.enums.AnimalType;
 import com.codecool.petadoption.enums.Gender;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 public class Pet {
 
