@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -47,6 +48,26 @@ public class PetController {
         }
     }
 
+    @GetMapping("/List")
+    public ResponseEntity<List<Pet>> getAllPets() {
+        try {
+            List<Pet> pets = petService.getAllPets();
+            return ResponseEntity.status(HttpStatus.OK).body(pets);
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
+    }
+
+    @DeleteMapping("/Delete/{id}")
+    public ResponseEntity<?> deletePet(@PathVariable long id) {
+        try {
+            Optional<Pet> pet = petService.getPetById(id);
+            pet.ifPresent(petService::deletePet);
+            return ResponseEntity.status(HttpStatus.OK).body("Pet [id - " + id + "] is deleted successfully");
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
+    }
 
 
 
