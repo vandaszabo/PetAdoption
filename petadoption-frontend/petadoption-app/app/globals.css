@@ -37,6 +37,17 @@ nav a {
   font-weight: 600;
 }
 
+li.active a {
+  color: #FA8C01;
+}
+
+ul.login-nav-items li.register a {
+  background-color: #F2968F;
+  color: white;
+  border-radius: 10em;
+  padding: 0.5em 1em;
+}
+
 /* Footer */
 footer {
   position: fixed;
@@ -48,15 +59,17 @@ footer {
   padding: 20px;
   text-align: center;
   font-size: 1.6rem;
-  
 }
+
 footer span {
   font-weight: 600;
   font-size: 2.5rem;
 }
+
 footer strong {
   color: #FF7578;
 }
+
 footer a {
   text-decoration: none;
   color: white;
@@ -65,13 +78,5 @@ footer a {
   padding: 0.5em 1em;
 }
 
-ul.login-nav-items li.register a {
-  background-color: #F2968F;
-  color: white;
-  border-radius: 10em;
-  padding: 0.5em 1em;
-}
 
-li.active a {
-  color: #FA8C01;
-}
+
