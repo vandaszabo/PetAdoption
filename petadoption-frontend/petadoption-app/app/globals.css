@@ -19,7 +19,7 @@ header {
 }
 
 nav {
-  margin: 4em;
+  margin: 4em 0;
   display: flex;
 }
 
@@ -84,7 +84,7 @@ footer a, .right a {
 .wrapper {
   margin-top: 3em;
   display: flex;
-  gap: 4.5em;
+  gap: 7.5em;
 }
 .left {
   width: 361px;
@@ -141,7 +141,7 @@ footer a, .right a {
 /*Action Buttons*/
 .action-wrapper {
   margin-top: 2.5em;
-  margin-bottom: 14.5em;
+  margin-bottom: 24.5em;
   display: flex;
   gap: 10em;
   justify-content: center;
@@ -157,7 +157,7 @@ footer a, .right a {
 }
 
 .action-btn-card span {
-  padding: 1em 2em 0 2em;
+  padding: 0 2em;
   line-height:1em;
   display: block;
   font-size: 2.5rem;

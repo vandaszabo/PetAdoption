@@ -10,7 +10,7 @@ interface ActionCardProps {
 const ActionCard: React.FC<ActionCardProps> = ({ text, image }) => {
   return (
     <div className='action-btn-card'>
-        <Image src={image} alt={text}/>
+        <Image src={image} alt={text} style={{margin: '2em'}}/>
       <span>{text}</span>
     </div>
   )
