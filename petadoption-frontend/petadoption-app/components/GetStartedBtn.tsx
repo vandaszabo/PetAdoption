@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
 
-const GetStarted = () => {
+const GetStartedBtn = () => {
   return (
     <a href="/register">Get Started</a>
   )
 }
 
-export default GetStarted
+export default GetStartedBtn

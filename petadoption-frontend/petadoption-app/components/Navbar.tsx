@@ -1,14 +1,14 @@
 import React from 'react';
 import Logo from './Logo';
-import NavButtons from './NavButtons';
-import LoginButtons from './LoginButtons';
+import NavBtns from './NavBtns';
+import LoginBtns from './LoginBtns';
 
 export const Navbar = () => {
     return (
         <header>
             <Logo />
-            <NavButtons />
-            <LoginButtons />
+            <NavBtns />
+            <LoginBtns />
         </header>
     );
 };

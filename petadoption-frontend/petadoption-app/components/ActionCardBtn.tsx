@@ -7,7 +7,7 @@ interface ActionCardButtonProps {
     actionCard: JSX.Element;
 }
 
-const ActionCardButton: React.FC<ActionCardButtonProps> = ({ path, actionCard }) => {
+const ActionCardBtn: React.FC<ActionCardButtonProps> = ({ path, actionCard }) => {
     return (
         <Link href={path} style={{textDecoration: 'none'}}>
                 {actionCard}
@@ -15,4 +15,4 @@ const ActionCardButton: React.FC<ActionCardButtonProps> = ({ path, actionCard })
     );
 };
 
-export default ActionCardButton
+export default ActionCardBtn

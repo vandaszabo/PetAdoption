@@ -2,7 +2,7 @@
 import React from 'react'
 import { usePathname } from 'next/navigation';
 
-const NavButtons = () => {
+const NavBtns = () => {
     const path = usePathname();
     return (
         <nav>
@@ -21,4 +21,4 @@ const NavButtons = () => {
     )
 }
 
-export default NavButtons
+export default NavBtns

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 
-const LoginButtons = () => {
+const LoginBtns = () => {
     return (
         <nav>
             <ul className='login-nav-items'>
@@ -16,4 +16,4 @@ const LoginButtons = () => {
     )
 }
 
-export default LoginButtons
+export default LoginBtns
