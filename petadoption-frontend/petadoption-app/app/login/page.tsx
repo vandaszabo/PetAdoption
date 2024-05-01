@@ -2,7 +2,7 @@ import React from 'react'
 
 const LoginPage = () => {
   return (
-    <div className='login-wrapper'>
+    <main className='login-wrapper'>
       <div className="login-left">
         <h1><p>Happiness</p> starts here</h1>
         <div className="login-image"></div>
@@ -12,7 +12,7 @@ const LoginPage = () => {
           <h3>Login</h3>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
 

@@ -192,7 +192,9 @@ footer a, .right a {
 }
 
 .login-right {
-  padding: 3em 12em;
+  min-width: 500px;
+  min-height: 800px;
+  padding: 1em 12em 3em 12em;
   z-index: -1;
   position: absolute;
   right: 0;
@@ -206,60 +208,53 @@ footer a, .right a {
   background: url('../public/paw2.png');
   background-size: cover;
   margin: auto;
+  position: relative;
 }
 
 .login-right h3 {
-  font-size: 3.5rem;
+  position: absolute;
+  top:55%;
+  left:30%;
+  font-size: 4rem;
   color:#714949;
 }
 
 
 /* Media query for smaller screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1080px) {
   nav ul {
     flex-direction: column;
     gap: 2em;
-  }
-
-  .action-wrapper {
-    gap: 1em;
   }
 
   nav a {
     font-size: 2.5rem;
   }
 
-  .login-left .login-image {
-    width: 575px;
-    height: 514px;
-    background-size: cover;
-    left: 0;
-    top: 0;
-  }
-
-  .login-left h1 {
-    font-size: 6rem;
+  .login-left {
+    display: none;
   }
 
   .login-right {
-    padding: 2em;
+    min-width: 50vw;
+    height: 70vh;
+    position: relative;
+    margin:auto;
+    margin-bottom: 5vh;
+    display: block;
+    padding: 1em 12em 3em 12em;
+    background-color: #FFF1EE;
+    border-radius: 3.8em;
   }
-
-  .login-logo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .login-right h3 {
-    font-size: 2.5rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-   .wrapper, .action-wrapper {
+  
+  .wrapper, .action-wrapper {
     display: block;
     margin-left:auto;
     margin-right: auto;
+  }
+
+  .action-wrapper {
+    gap: 1em;
   }
 
   .action-wrapper a {
@@ -280,13 +275,6 @@ footer a, .right a {
     font-size: 2rem;
   }
 
-  .login-left .login-image {
-    width: 375px;
-    height: 314px;
-    background-size: cover;
-    left: 0;
-    top: 0;
-  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -302,15 +290,6 @@ footer a, .right a {
   .right a {
     font-size: 1.6rem;
   }
-
-  .login-left .login-image {
-    width: 375px;
-    height: 314px;
-    background-size: cover;
-    left: 0;
-    top: 0;
-  }
-
 }
 
 
