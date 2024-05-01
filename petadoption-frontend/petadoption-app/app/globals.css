@@ -172,13 +172,15 @@ footer a, .right a {
   position: relative;
 }
 
-.login-left .login-image{
+.login-left .login-image {
+  position: relative;
   width: 575px;
   height: 514px;
-  left: 145px;
-  top: 442px;
+  top: 65px;
+  z-index: 1;
   background: url('../public/juicy-ai-person-detection-slash-face-id.png');
 }
+
 .login-left h1 {
   line-height:0.2em;
   margin-top: 1.3em;
@@ -192,12 +194,12 @@ footer a, .right a {
 }
 
 .login-right {
+  position: absolute;
+  right:0;
   min-width: 500px;
   min-height: 800px;
   padding: 1em 12em 3em 12em;
   z-index: -1;
-  position: absolute;
-  right: 0;
   background-color: #FFF1EE;
   border-radius: 3.8em;
 }
@@ -219,6 +221,53 @@ footer a, .right a {
   color:#714949;
 }
 
+form {
+  position: absolute;
+  margin-top: 30em;
+  transform: translate(-30%, -20%);
+}
+
+.sign-in {
+  width: fit-content;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: #F2968F;
+  border:none;
+  border-radius: 10em;
+  padding: 0.9em 2.2em;
+}
+
+.btn-container {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+}
+
+form label {
+  padding: 5em 0;
+  font-size: 2.6rem;
+  color: rgba(0, 0, 0, 0.40);
+}
+
+form input {
+  margin: 0.3em 0;
+  font-size: 4rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid rgba(48, 48, 48, 0.4);
+}
+
+.message {
+  font-size: 2.5rem;
+  margin-top: 1.8em;
+}
+
+.message a {
+  color: #FF7578;
+  text-decoration: none;
+}
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 1080px) {
