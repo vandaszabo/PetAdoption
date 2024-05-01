@@ -166,6 +166,153 @@ footer a, .right a {
   color: #714949;
 }
 
+/*Login*/
+.login-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.login-left .login-image{
+  width: 575px;
+  height: 514px;
+  left: 145px;
+  top: 442px;
+  background: url('../public/juicy-ai-person-detection-slash-face-id.png');
+}
+.login-left h1 {
+  line-height:0.2em;
+  margin-top: 1.3em;
+  color: #3a3a3a;
+  font-size: 8rem;
+  font-weight: 600;
+}
+
+.login-left h1 p {
+  color:#FF7578;
+}
+
+.login-right {
+  padding: 3em 12em;
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  background-color: #FFF1EE;
+  border-radius: 3.8em;
+}
+
+.login-logo {
+  width: 195px;
+  height: 195px;
+  background: url('../public/paw2.png');
+  background-size: cover;
+  margin: auto;
+}
+
+.login-right h3 {
+  font-size: 3.5rem;
+  color:#714949;
+}
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 1200px) {
+  nav ul {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .action-wrapper {
+    gap: 1em;
+  }
+
+  nav a {
+    font-size: 2.5rem;
+  }
+
+  .login-left .login-image {
+    width: 575px;
+    height: 514px;
+    background-size: cover;
+    left: 0;
+    top: 0;
+  }
+
+  .login-left h1 {
+    font-size: 6rem;
+  }
+
+  .login-right {
+    padding: 2em;
+  }
+
+  .login-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .login-right h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+   .wrapper, .action-wrapper {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+  }
+
+  .action-wrapper a {
+    display: inline-block;
+    margin: 2em;
+  }
+
+  footer {
+    font-size: 1.4rem;
+  }
+
+  footer span {
+    font-size: 4rem;
+  }
+
+  footer a,
+  .right a {
+    font-size: 2rem;
+  }
+
+  .login-left .login-image {
+    width: 375px;
+    height: 314px;
+    background-size: cover;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  footer {
+    font-size: 1.2rem;
+  }
+
+  footer span {
+    font-size: 3.5rem;
+  }
+
+  footer a,
+  .right a {
+    font-size: 1.6rem;
+  }
+
+  .login-left .login-image {
+    width: 375px;
+    height: 314px;
+    background-size: cover;
+    left: 0;
+    top: 0;
+  }
+
+}
+
 
 
 
