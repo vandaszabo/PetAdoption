@@ -210,6 +210,7 @@ footer a, .right a {
   background: url('../public/paw2.png');
   background-size: cover;
   margin: auto;
+  margin-top: 3em;
   position: relative;
 }
 
@@ -223,8 +224,7 @@ footer a, .right a {
 
 form {
   position: absolute;
-  margin-top: 30em;
-  transform: translate(-30%, -20%);
+  margin-top: 10em;
 }
 
 .sign-in {
@@ -247,7 +247,7 @@ form {
 }
 
 form label {
-  padding: 5em 0;
+  display: block;
   font-size: 2.6rem;
   color: rgba(0, 0, 0, 0.40);
 }
