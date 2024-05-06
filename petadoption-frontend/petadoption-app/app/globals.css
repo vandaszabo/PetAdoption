@@ -210,21 +210,23 @@ footer a, .right a {
   background: url('../public/paw2.png');
   background-size: cover;
   margin: auto;
-  margin-top: 3em;
   position: relative;
 }
 
 .login-right h3 {
+  justify-content: center;
+  text-align: center;
   position: absolute;
-  top:55%;
-  left:30%;
+  width: 300px;
+  top:53%;
+  left: -25%;
   font-size: 4rem;
   color:#714949;
 }
 
 form {
   position: absolute;
-  margin-top: 10em;
+  margin-top: 8em;
 }
 
 .sign-in {
@@ -270,7 +272,7 @@ form input {
 }
 
 /* Media query for smaller screens */
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1160px) {
   nav ul {
     flex-direction: column;
     gap: 2em;
@@ -289,9 +291,8 @@ form input {
     height: 70vh;
     position: relative;
     margin:auto;
-    margin-bottom: 5vh;
+    margin-bottom: 15vh;
     display: block;
-    padding: 1em 12em 3em 12em;
     background-color: #FFF1EE;
     border-radius: 3.8em;
   }
@@ -311,6 +312,10 @@ form input {
     margin: 2em;
   }
 
+  form input{
+    width: 50vw;
+  }
+
   footer {
     font-size: 1.4rem;
   }
@@ -327,6 +332,7 @@ form input {
 }
 
 @media only screen and (max-width: 480px) {
+
   footer {
     font-size: 1.2rem;
   }

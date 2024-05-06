@@ -2,9 +2,14 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import RedirectBtn from './RedirectBtn';
 
-const LoginForm: React.FC = () => {
+const RegisterForm: React.FC = () => {
   const [email, setEmail] = useState<string>('');
+  const [name, setName] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setName(e.target.value);
+  };
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setEmail(e.target.value);
@@ -21,6 +26,15 @@ const LoginForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+    <label htmlFor="name">Full Name</label>
+      <input
+        type="name"
+        id="name"
+        value={name}
+        onChange={handleNameChange}
+        required
+      />
+
       <label htmlFor="email">Email Address</label>
       <input
         type="email"
@@ -40,11 +54,11 @@ const LoginForm: React.FC = () => {
       />
 
       <div className='btn-container'>
-        <button className='sign-in' type="submit">Sign In</button>
-        <RedirectBtn title='SignUp' path='/register'/>
+        <button className='sign-in' type="submit">Sign Up</button>
+        <RedirectBtn title='Login' path='/login'/>
       </div>
     </form>
   );
 };
 
-export default LoginForm;
+export default RegisterForm;
