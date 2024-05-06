@@ -21,7 +21,7 @@ export default function Home() {
             </div>
             <div className='action-wrapper'>
                 <ActionCardBtn path="/contact" actionCard={ <ActionCard text={'non-profit animal shelter'} image={petShopImage} />} />
-                <ActionCardBtn path="/pets" actionCard={<ActionCard text={'search by type, breed, location and more!'} image={petOwner} />} />
+                <ActionCardBtn path="/pets/all" actionCard={<ActionCard text={'search by type, breed, location and more!'} image={petOwner} />} />
                 <ActionCardBtn path="/" actionCard={ <ActionCard text={'news & updates on newest pets'} image={petsAllowed} />} />
             </div>
         </main>

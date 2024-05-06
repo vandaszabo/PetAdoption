@@ -99,7 +99,6 @@ footer a, .right a {
   flex: none;
   order: 0;
   flex-grow: 0;
-   ;
 }
 
 .right h1 {
@@ -269,6 +268,82 @@ form input {
 .message a {
   color: #FF7578;
   text-decoration: none;
+}
+
+/*Browse*/
+.filterBtns {
+  display: flex;
+  gap: 2em;
+  margin: 5em 0;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.active-filter-btn a {
+  cursor: pointer;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  background-color: #F2968F;
+  border-radius: 10em;
+  padding: 0.5em 1em 0.5em 0.5em;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.filter-btn a {
+  cursor: pointer;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #2B2B2E;
+  background-color: transparent;
+  border: 2px solid #2B2B2E;
+  border-radius: 10em;
+  padding: 0.5em 1em 0.5em 0.5em;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.all-avatar {
+  width: 40px;
+  height: 40px;
+  background: url('../public/cat-and-dog.jpg');
+  background-size: cover;
+  mix-blend-mode: normal;
+  border-radius: 50%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.cat-avatar {
+  width: 40px;
+  height: 40px;
+  background: url('../public/cat2.jpg');
+  background-size: cover;
+  mix-blend-mode: normal;
+  border-radius: 50%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.dog-avatar {
+  width: 40px;
+  height: 40px;
+  background: url('../public/dog2.jpg');
+  background-size: cover;
+  mix-blend-mode: normal;
+  border-radius: 50%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 /* Media query for smaller screens */

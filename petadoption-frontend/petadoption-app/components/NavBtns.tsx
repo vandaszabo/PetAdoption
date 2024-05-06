@@ -10,7 +10,7 @@ const NavBtns = () => {
                 <li className={path === '/' ? 'active' : ''}>
                     <a href="/">Home</a>
                 </li>
-                <li className={path === '/pets' ? 'active' : ''}>
+                <li className={path === '/pets/all' ? 'active' : ''}>
                     <a href="/pets">Browse</a>
                 </li>
                 <li className={path === '/contact' ? 'active' : ''}>
