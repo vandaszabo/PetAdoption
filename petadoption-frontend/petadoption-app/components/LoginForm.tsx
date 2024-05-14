@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import RedirectBtn from './RedirectBtn';
+import SignInWithGoogleButton from './SignInWithGoogleBtn';
 
 const LoginForm: React.FC = () => {
   const [email, setEmail] = useState<string>('');
@@ -21,6 +22,7 @@ const LoginForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+     <SignInWithGoogleButton />
       <label htmlFor="email">Email Address</label>
       <input
         type="email"
@@ -41,7 +43,7 @@ const LoginForm: React.FC = () => {
 
       <div className='btn-container'>
         <button className='sign-in' type="submit">Sign In</button>
-        <RedirectBtn title='SignUp' path='/register'/>
+        <RedirectBtn title='SignUp' path='/register' />
       </div>
     </form>
   );

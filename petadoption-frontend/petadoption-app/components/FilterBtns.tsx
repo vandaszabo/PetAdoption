@@ -7,23 +7,23 @@ const FilterBtns = () => {
 
     return (
         <ul className='filterBtns'>
-            <li className={path === '/pets/all' ? 'active-filter-btn' : 'filter-btn'}>
-                <a href="/pets/all">
+            <li className={path === '/pets' ? 'active-filter-btn' : 'filter-btn'}>
+                <button>
                     <div className='all-avatar'></div>
                     All
-                </a>
+                </button>
             </li>
             <li className={path === '/pets/cats' ? 'active-filter-btn' : 'filter-btn'}>
-                <a href="/pets/cats">
+                <button>
                     <div className='cat-avatar'></div>
                     Cat
-                </a>
+                </button>
             </li>
             <li className={path === '/pets/dogs' ? 'active-filter-btn' : 'filter-btn'}>
-                <a href="/pets/dogs">
+                <button>
                     <div className='dog-avatar'></div>
                     Dog
-                </a>
+                </button>
             </li>
         </ul>
     )

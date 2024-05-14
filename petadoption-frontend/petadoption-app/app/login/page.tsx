@@ -1,6 +1,5 @@
 import LoginForm from '@/components/LoginForm'
 import React from 'react'
-import RedirectBtn from '@/components/RedirectBtn'
 
 const LoginPage = () => {
   return (
