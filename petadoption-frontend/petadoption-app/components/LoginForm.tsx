@@ -3,9 +3,11 @@ import React, { useState, FormEvent, ChangeEvent } from 'react';
 import RedirectBtn from './RedirectBtn';
 import SignInWithGoogleButton from './SignInWithGoogleBtn';
 import { useRouter } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 
 const LoginForm: React.FC = () => {
   const router = useRouter();
+  const [error, setError] = useState<string | null>(null);
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
@@ -17,26 +19,23 @@ const LoginForm: React.FC = () => {
     setPassword(e.target.value);
   };
 
-  const loginUser = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
-    const response = await fetch('/api/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({email, password})
-    })
-
-    console.log(response);
-
-    if(response.ok){
-      localStorage.setItem('userEmail', email)
+    const signInResponse = await signIn("credentials", {
+      email: email,
+      password: password,
+      redirect: false
+    });
+    if(signInResponse && !signInResponse.error) {
       router.push('/')
+    }else{
+      console.log("Error: ", signInResponse);
+      setError("Your email or password is wrong!");
     }
   };
 
   return (
-    <form onSubmit={loginUser}>
+    <form onSubmit={handleSubmit}>
      <SignInWithGoogleButton />
       <label htmlFor="email">Email Address</label>
       <input
