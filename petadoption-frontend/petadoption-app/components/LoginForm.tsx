@@ -2,8 +2,10 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import RedirectBtn from './RedirectBtn';
 import SignInWithGoogleButton from './SignInWithGoogleBtn';
+import { useRouter } from 'next/navigation';
 
 const LoginForm: React.FC = () => {
+  const router = useRouter();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
@@ -15,13 +17,26 @@ const LoginForm: React.FC = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  const loginUser = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
-    console.log("Submitted");
+    const response = await fetch('/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({email, password})
+    })
+
+    console.log(response);
+
+    if(response.ok){
+      localStorage.setItem('userEmail', email)
+      router.push('/')
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={loginUser}>
      <SignInWithGoogleButton />
       <label htmlFor="email">Email Address</label>
       <input
