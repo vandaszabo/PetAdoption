@@ -5,6 +5,7 @@ import LoginBtns from './LoginBtns';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const AuthBtns: React.FC = () => {
     const router = useRouter();
@@ -15,7 +16,7 @@ const AuthBtns: React.FC = () => {
         if (session && path === '/login') {
             router.push('/');
         }
-    }, [session, router]);
+    }, [session, router, path]);
 
     const handleLogout = async () => {
         await signOut({ redirect: false, callbackUrl: '/' });
@@ -25,7 +26,7 @@ const AuthBtns: React.FC = () => {
         <div>
             {session? (
                 <div className='user-display'>
-                <img className='user-image' src={session?.user?.image as string} alt="user" />
+                <Image className='user-image' src={session?.user?.image as string} alt="user" />
                 <h2>{session?.user?.name}</h2>
                 <button onClick={handleLogout}>Logout</button>
                 </div>

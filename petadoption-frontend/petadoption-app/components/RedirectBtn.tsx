@@ -8,7 +8,7 @@ interface RedirectBtnProps {
 
 const RedirectBtn: React.FC<RedirectBtnProps> = ({ title, path }) => {
   return (
-    <div className="message"> <span>Don't have an account?</span> <a href={path}>{title}</a></div>
+    <div className="message"> <span>Don&apos;t have an account?</span> <a href={path}>{title}</a></div>
   )
 }
 
