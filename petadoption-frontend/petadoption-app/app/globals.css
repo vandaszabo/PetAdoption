@@ -255,8 +255,9 @@ form label {
 }
 
 form input {
+  width: 100%;
   margin: 0.3em 0;
-  font-size: 4rem;
+  font-size: 3.5rem;
   border-radius: 0.8rem;
   border: 0.1rem solid rgba(48, 48, 48, 0.4);
 }
@@ -345,6 +346,12 @@ form input {
   flex: none;
   order: 0;
   flex-grow: 0;
+}
+
+/*Error message*/
+.error{
+  color:red;
+  font-size: 2rem;
 }
 
 /*Google Button*/
