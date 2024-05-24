@@ -26,9 +26,9 @@ const LoginForm: React.FC = () => {
       password: password,
       redirect: false
     });
-    if(signInResponse && !signInResponse.error) {
+    if (signInResponse && !signInResponse.error) {
       router.push('/')
-    }else{
+    } else {
       console.log("Error: ", signInResponse);
       setError("Your email or password is wrong!");
     }
@@ -36,7 +36,10 @@ const LoginForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-     <SignInWithGoogleButton />
+      <div className='googleSignIn'>
+        <SignInWithGoogleButton />
+        <p className='or'>- OR -</p>
+      </div>
       <label htmlFor="email">Email Address</label>
       <input
         type="email"
