@@ -2,8 +2,7 @@ import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google"
 import CredentialsProvider from "next-auth/providers/credentials";
 import db from "./db";
-const bcrypt = require('bcrypt');
-import { User } from "@prisma/client";
+const bcrypt = require('bcryptjs');
 
 export const authConfig: NextAuthOptions = {
   session: {
