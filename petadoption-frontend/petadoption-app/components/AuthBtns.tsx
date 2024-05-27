@@ -27,9 +27,9 @@ const AuthBtns: NextPage = () => {
         <div>
             {session ? (
                 <div className='user-display'>
-                    {session?.user?.image &&
+                    {/* {session?.user?.image &&
                         <Image className='user-image' src={session?.user?.image as string} alt="user" width={100} height={100} />
-                    }
+                    } */}
                     {/* <h2>{session?.user?.name}</h2> */}
                     <li className={path === '/profile' ? 'active' : ''}>
                     <a href={'/profile'}>Account</a>
