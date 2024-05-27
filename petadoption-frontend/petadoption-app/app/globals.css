@@ -23,21 +23,22 @@ nav {
   display: flex;
 }
 
-nav ul {
+nav ul, .user-display {
   list-style-type: none;
   display: flex;
   gap: 5.1em;
   margin: 0;
 }
 
-nav a {
+nav a, .user-display a {
   text-decoration: none;
   color: #714949;
   font-size: 3rem;
   font-weight: 600;
 }
 
-li.active a {
+
+li.active a, li.active.user-display a {
   color: #FA8C01;
 }
 
@@ -404,11 +405,20 @@ form input {
   gap: 1em;
 }
 
+.user-display button {
+  border: none;
+  background-color:#FFDDD2;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .user-image {
   height: 50px;
   width: auto;
   border-radius: 50%;
 }
+
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 1160px) {
