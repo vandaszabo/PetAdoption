@@ -1,8 +1,8 @@
-# About the Project
+## About the Project
 Welcome to the Pet Adoption Management System! 
 It is designed to facilitate the pet adoption process by allowing users to register, log in, and eventually browse available pets and submit adoption requests.
 
-# Features
+## Features
 User Registration and Login:
 Users can register for an account.
 Registered users can log in to their accounts.
@@ -16,11 +16,10 @@ https://pet-adoption-ikdodbac3-vanda-reszketo-szabos-projects.vercel.app
 Simply visit the provided URL and register for an account. Once registered, log in to your account. 
 Functionalities will be added soon.
 
-### Future Updates
+## Future Updates
 Pet Browsing:
 Once logged in, users will be able to browse through the list of available pets.
 Each pet listing will include details such as name, breed, gender and age.
-
 Adoption Requests:
 Users will be able to submit adoption requests for pets they are interested in.
 
