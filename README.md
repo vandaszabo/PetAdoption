@@ -18,10 +18,10 @@ Functionalities will be added soon.
 
 ## Future Updates
 Pet Browsing:
-Once logged in, users will be able to browse through the list of available pets.
+Viewing adoptable pets will be available without logging in.
 Each pet listing will include details such as name, breed, gender and age.
 Adoption Requests:
-Users will be able to submit adoption requests for pets they are interested in.
+Logged-in users will be able to submit adoption requests for pets they are interested in.
 
 ## Technologies Used
 - Next.js
