@@ -17,10 +17,11 @@ Simply visit the provided URL and register for an account. Once registered, log 
 Functionalities will be added soon.
 
 ## Future Updates
-Pet Browsing:
+1. Pet Browsing:
 Viewing adoptable pets will be available without logging in.
 Each pet listing will include details such as name, breed, gender and age.
-Adoption Requests:
+
+3. Adoption Requests:
 Logged-in users will be able to submit adoption requests for pets they are interested in.
 
 ## Technologies Used
