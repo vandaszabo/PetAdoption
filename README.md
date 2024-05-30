@@ -10,7 +10,7 @@ Login functionality includes login with Google.
 
 ## Accessing the Website
 The Pet Adoption Management System can be accessed at the following URL:
-https://pet-adoption-ikdodbac3-vanda-reszketo-szabos-projects.vercel.app
+https://pet-adoption-epwa2pnst-vanda-reszketo-szabos-projects.vercel.app
 
 ## Getting Started
 Simply visit the provided URL and register for an account. Once registered, log in to your account. 
