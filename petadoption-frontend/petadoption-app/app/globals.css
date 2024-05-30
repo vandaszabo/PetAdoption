@@ -85,7 +85,7 @@ footer {
 
 .left-footer {
   justify-content: left;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .left-footer a,
@@ -98,7 +98,7 @@ footer {
 footer span {
   text-align: left;
   font-weight: 600;
-  font-size: 4.5rem;
+  font-size: 4rem;
 }
 
 footer strong {
@@ -107,7 +107,7 @@ footer strong {
 
 footer a,
 .right a {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-decoration: none;
   color: white;
   background-color: #F2968F;
@@ -599,7 +599,7 @@ form input {
 
   .footer-info {
     gap: 0;
-    flex-direction: column;
+    justify-content: space-around;
   }
 }
 
@@ -624,6 +624,14 @@ form input {
 
   h1 {
     width: min-content;
+  }
+
+  .left-footer {
+    padding: 20px;
+  }
+
+  .left-footer span {
+    display: none;
   }
 }
 

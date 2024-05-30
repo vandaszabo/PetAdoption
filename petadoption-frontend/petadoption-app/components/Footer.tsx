@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <div className='footer-container'>
         <div className="left-footer">
-          <span>Ready to find the <strong>one</strong> ? </span>
+          <span>Ready to find the <strong>one</strong>?</span>
           <GetStartedBtn />
         </div>
         <div className="community-icons">
