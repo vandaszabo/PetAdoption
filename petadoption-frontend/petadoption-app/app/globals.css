@@ -491,9 +491,40 @@ form input {
 }
 
 .user-image {
-  height: 50px;
+  height: 100px;
   width: auto;
-  border-radius: 50%;
+  border: 5px solid #F2968F;
+  border-radius: 3.5em;
+}
+
+.profile,
+.profile-left {
+  margin-top: 2em;
+  gap: 2em;
+  font-size: 2rem;
+  color: #714949;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.profile h3 {
+  color: #FF7578;
+  font-weight: 100;
+}
+
+.logout-button button {
+  font-size: 2rem;
+  background-color: #F2968F;
+  color: white;
+  border: none;
+  border-radius: 10em;
+  padding: 0.5em 1em;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 
