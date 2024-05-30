@@ -34,7 +34,7 @@ const AuthBtns: NextPage = () => {
                     <li className={path === '/profile' ? 'active' : ''}>
                     <a href={'/profile'}>Account</a>
                     </li>
-                    <button onClick={handleLogout}><Image src='/logout_icon.png' alt='logout' width={30} height={40}/></button>
+                    <button onClick={handleLogout}>Logout<Image src='/logout_icon.png' alt='logout' width={30} height={40}/></button>
                 </div>
             ) : (
                 <LoginBtns />
