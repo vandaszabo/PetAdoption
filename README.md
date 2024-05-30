@@ -16,7 +16,7 @@ https://pet-adoption-dt9kh4jzp-vanda-reszketo-szabos-projects.vercel.app
 Simply visit the provided URL and register for an account. Once registered, log in to your account. 
 Functionalities will be added soon.
 
-![Alt text](https://github.com/vandaszabo/PetAdoption/blob/main/website.png?raw=true)
+<img src="https://github.com/vandaszabo/PetAdoption/blob/main/website.png?raw=true" alt="Website Preview" width="400" height="auto">
 
 ## Future Updates
 1. Pet Browsing:
