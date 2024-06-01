@@ -1,5 +1,5 @@
 ## About the Project
-# Welcome to the Pet Adoption Management System!
+<h2>Welcome to the Pet Adoption Management System!</h2>
 ### It is designed to facilitate the pet adoption process by allowing users to register, log in, and eventually browse available pets and submit adoption requests.
 
 ## Features
@@ -21,7 +21,9 @@ Functionalities will be added soon.
 ## Installation Instructions
 ### Install Dependencies
 Navigate to the project directory and install the required dependencies:
-```npm install```
+```
+npm install
+```
 
 ### Configuration
 Create a .env.local file:
@@ -44,20 +46,22 @@ NEXT_PUBLIC_API_URL=https://api.example.com
 ```
 
 - Obtain OAuth 2.0 credentials from the Google API Console:
-  1. Visit the Google API Console.
-  2. Create a new project or select an existing project.
-  3. Navigate to the "Credentials" section.
-  4. Create OAuth 2.0 credentials to obtain a client ID and client secret.
+  a. Visit the Google API Console.
+  b. Create a new project or select an existing project.
+  c. Navigate to the "Credentials" section.
+  d. Create OAuth 2.0 credentials to obtain a client ID and client secret.
 
 - Add your own NextAuth secret and your localhost URL.
 
 - Create a PostgreSQL database:
-  1. You can create it on a cloud platform like Vercel or any other cloud service provider.
-  2. Obtain the database connection string.
+  a. You can create it on a cloud platform like Vercel or any other cloud service provider.
+  b. Obtain the database connection string.
 
 ### Start the Development Server
 Once the dependencies are installed and all environment variables are added, you can start the development server:
-```npm run dev```
+```
+npm run dev
+```
 
 ## Future Updates
 1. Pet Browsing:
