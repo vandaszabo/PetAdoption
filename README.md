@@ -3,10 +3,10 @@ Welcome to the Pet Adoption Management System!
 It is designed to facilitate the pet adoption process by allowing users to register, log in, and eventually browse available pets and submit adoption requests.
 
 ## Features
-- User Registration and Login:
-Users can register for an account.
-Registered users can log in to their accounts.
-Login functionality includes login with Google.
+### User Registration and Login:
+- Users can register for an account.
+- Registered users can log in to their accounts.
+- Login functionality includes login with Google.
 
 ## Accessing the Website
 The Pet Adoption Management System can be accessed at the following URL:
