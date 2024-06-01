@@ -71,7 +71,7 @@ Each pet listing will include details such as name, breed, gender and age.
 Logged-in users will be able to submit adoption requests for pets they are interested in.
 
 ## Technologies Used
-- Next.js
+- Next.js 14.2
 - Vercel
 - Postgres
 - Prisma
