@@ -45,17 +45,17 @@ NODE_ENV=development
 NEXT_PUBLIC_API_URL=https://api.example.com
 ```
 
-- Obtain OAuth 2.0 credentials from the Google API Console:
-  a. Visit the Google API Console.
-  b. Create a new project or select an existing project.
-  c. Navigate to the "Credentials" section.
-  d. Create OAuth 2.0 credentials to obtain a client ID and client secret.
+1. Obtain OAuth 2.0 credentials from the Google API Console:
+* Visit the Google API Console.
+* Create a new project or select an existing project.
+* Navigate to the "Credentials" section.
+* Create OAuth 2.0 credentials to obtain a client ID and client secret.
 
-- Add your own NextAuth secret and your localhost URL.
+2. Add your own NextAuth secret and your localhost URL.
 
-- Create a PostgreSQL database:
-  a. You can create it on a cloud platform like Vercel or any other cloud service provider.
-  b. Obtain the database connection string.
+3. Create a PostgreSQL database:
+* You can create it on a cloud platform like Vercel or any other cloud service provider.
+* Obtain the database connection string.
 
 ### Start the Development Server
 Once the dependencies are installed and all environment variables are added, you can start the development server:
