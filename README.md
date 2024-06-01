@@ -1,9 +1,8 @@
 ## About the Project
-🐈 🐕
 ### It is designed to facilitate the pet adoption process by allowing users to register, log in, and eventually browse available pets and submit adoption requests. 
 
 ## Features
-### User Registration and Login:
+1. User Registration and Login:
 - Users can register for an account.
 - Registered users can log in to their accounts.
 - Login functionality includes login with Google.
