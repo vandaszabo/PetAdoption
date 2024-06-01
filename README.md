@@ -19,11 +19,11 @@ Functionalities will be added soon.
 <img src="https://github.com/vandaszabo/PetAdoption/blob/main/website.png?raw=true" alt="Website Preview" width="400" height="auto">
 
 ## Installation Instructions
-1. Install Dependencies
+### Install Dependencies
 Navigate to the project directory and install the required dependencies:
 ```npm install```
 
-2. Configuration
+### Configuration
 Create a .env.local file:
 Make sure to replace placeholders like yourGoogleClientId, yourGoogleClientSecret, yourNextAuthSecret, and yourDatabaseConnectionString with your actual credentials and connection strings.
 ```
@@ -55,7 +55,7 @@ NEXT_PUBLIC_API_URL=https://api.example.com
   1. You can create it on a cloud platform like Vercel or any other cloud service provider.
   2. Obtain the database connection string.
 
-3. Start the Development Server
+### Start the Development Server
 Once the dependencies are installed and all environment variables are added, you can start the development server:
 ```npm run dev```
 
