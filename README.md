@@ -1,6 +1,6 @@
 ## About the Project
-Welcome to the Pet Adoption Management System! 
-It is designed to facilitate the pet adoption process by allowing users to register, log in, and eventually browse available pets and submit adoption requests.
+### Welcome to the Pet Adoption Management System! 
+### It is designed to facilitate the pet adoption process by allowing users to register, log in, and eventually browse available pets and submit adoption requests.
 
 ## Features
 ### User Registration and Login:
