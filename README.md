@@ -1,5 +1,5 @@
 ## About the Project
-### Welcome to the Pet Adoption Management System! 
+<h1 style="color: orange;"> Welcome to the Pet Adoption Management System! </h1>
 ### It is designed to facilitate the pet adoption process by allowing users to register, log in, and eventually browse available pets and submit adoption requests.
 
 ## Features
