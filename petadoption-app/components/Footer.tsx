@@ -4,7 +4,9 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
+    
     <footer>
+      <div className='footer-wrapper'>
       <div className='footer-container'>
         <div className="left-footer">
           <span>Ready to find the <strong>one</strong>?</span>
@@ -25,6 +27,7 @@ const Footer = () => {
           <p>Terms & Conditions</p>
           <p>Privacy Policy</p>
           </div>
+        </div>
         </div>
     </footer>
   )

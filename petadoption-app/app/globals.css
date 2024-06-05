@@ -1,16 +1,65 @@
 html {
   font-size: 42.5%;
-  max-width: 1200px;
-  margin: 0 auto;
   background-color: #FFDDD2;
   min-height: 100vh;
-  margin-bottom: 10vh;
 }
 
-body, .footer, .footer-container, .footer-info {
-  padding-left:10em;
-  padding-right: 10em;
+body, header {
+  margin: auto;
+  max-width: 1200px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Footer */
+footer {
+  width: 100vw; /* Make sure the footer spans the full viewport width */
+  background-color: #FFF1EE;
+  padding: 1em 0; /* Add some padding to the footer */
+  position: relative; /* Ensure proper positioning */
+  left: 50%; /* Move the footer to the middle */
+  right: 50%; /* Move the footer to the middle */
+  margin-left: -50vw; /* Adjust the left margin to ensure full width */
+  margin-right: -50vw; /* Adjust the right margin to ensure full width */
+}
+
+.footer-wrapper {
+  color: #714949;
+  font-size: 2.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 1em;
+  margin: auto;
+  width: 100%;
+  display: block;
+}
+
+.footer-container, .footer-info {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px; /* Constrain the maximum width of the content */
+  margin: auto; /* Center the content within the footer */
+}
+
+footer strong {
+  color: #FF7578;
+}
+
+footer span {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.email, .community-icons, .footer-info-right, .left-footer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  background-color: #F2968F;
+  border-radius: 10em;
+  padding: 0.6em 1em;
 }
 
 /*Navbar*/
@@ -56,67 +105,15 @@ ul.login-nav-items li.register a {
   font-weight: 400;
 }
 
-/* Footer */
-footer {
-  width: 100%;
-  position: fixed;
-  color: #714949;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  background-color: #FFF1EE;
-  text-align: center;
-  padding-top: 1em;
-  margin: auto;
-}
-.left-footer{
-  margin-left: 10em;
-}
-
-.community-icons{
-  margin-right: 10em;
-}
-
-.footer-container {
-  max-width: 1200px;
+/*Hero section*/
+.wrapper {
+  margin-top: 3em;
   display: flex;
-  justify-content: space-between;
-  margin: auto;
+  justify-content: center;
+  gap: 7.5em;
 }
 
-.community-icons {
-  display: flex;
-  justify-content: right;
-  width: 300px;
-  gap: 0.5em;
-}
-
-.left-footer {
-  justify-content: left;
-  align-items: center;
-  text-align: center;
-}
-
-.left-footer a,
-.left-footer span {
-  font-size: 3.5rem;
-  margin: 0;
-  width: fit-content;
-  text-align: left;
-  font-weight: 600;
-}
-
-.left-footer a {
-  font-weight: 400;
-  font-size: 2rem;
-}
-
-footer strong {
-  color: #FF7578;
-}
-
-footer a,
-.right a {
+.wrapper a {
   font-size: 3rem;
   text-decoration: none;
   color: white;
@@ -125,49 +122,13 @@ footer a,
   padding: 0.6em 1em;
 }
 
-.footer-info {
-  max-width: 1200px;
-  font-size: 2.5rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 10em;
-  margin: auto;
-  align-items: center;
-}
-
-.email {
-  padding-left: 5em;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.footer-info-right {
-  font-size: 2.5rem;
-  display: flex;
-  justify-content: space-evenly;
-  gap: 5em;
-  padding-right: 5em;
-}
-
-/*Hero section*/
-.wrapper {
-  margin-top: 3em;
-  display: flex;
-  gap: 7.5em;
-}
-
 .left {
-  width: 361px;
-  height: 411px;
-
+  width: 261px;
+  height: 311px;
   background: url('../public/owners.png');
-  background-size: cover;
+  background-size: contain;
   mix-blend-mode: normal;
   border-radius: 0px;
-
-  /* Inside auto layout */
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -176,7 +137,7 @@ footer a,
 .right h1 {
   margin-top: 1.3em;
   color: #3a3a3a;
-  font-size: 8rem;
+  font-size: 6.5rem;
   font-weight: 600;
 }
 
@@ -190,10 +151,10 @@ footer a,
 }
 
 .advert-image {
-  width: 236px;
-  height: 333px;
+  width: 136px;
+  height: 233px;
   background: url('../public/Paw_Print\ 2.png');
-  background-size: cover;
+  background-size:contain;
   margin: auto;
 }
 
@@ -202,7 +163,7 @@ footer a,
   position: absolute;
   font-size: 3.5rem;
   font-weight: 600;
-  top: 50%;
+  top: 39%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #714949;
@@ -212,7 +173,7 @@ footer a,
 /*Action Buttons*/
 .action-wrapper {
   margin-top: 2.5em;
-  margin-bottom: 24.5em;
+  margin-bottom: 10em;
   display: flex;
   gap: 10em;
   justify-content: center;
@@ -224,12 +185,13 @@ footer a,
   width: 200px;
   height: 200px;
   border-radius: 3.5em;
-  justify-content: center;
   align-items: center;
+  display: block; 
+  padding-top: 2em;
 }
 
 .action-btn-card span {
-  padding: 0 2em;
+  padding: 0 3em;
   line-height: 1em;
   display: block;
   font-size: 2.5rem;
@@ -242,6 +204,7 @@ footer a,
   height: 80px;
   width: auto;
 }
+
 /*Login*/
 .login-wrapper {
   display: flex;
@@ -546,10 +509,7 @@ form input {
 
 
 /* Media query for smaller screens */
-@media only screen and (max-width: 1440px) {
-  footer {
-    display: none;
-  }
+@media only screen and (max-width: 1200px) {
 
   header {
     justify-content: space-around;
@@ -611,8 +571,6 @@ form input {
     /* Adjusted background position */
   }
 
-
-
   .wrapper,
   .action-wrapper {
     display: block;
@@ -633,6 +591,10 @@ form input {
     width: 50vw;
   }
 
+  .footer-container, .footer-info{
+    justify-content: space-evenly;
+  }
+
 }
 
 @media only screen and (max-width: 630px) {
@@ -646,6 +608,10 @@ form input {
 
   h1 {
     width: min-content;
+  }
+
+  .left-footer span {
+    display: none;
   }
 
 }
