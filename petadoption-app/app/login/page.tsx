@@ -12,7 +12,7 @@ const LoginPage = () => {
         <div className='login-logo'>
           <h3>Login</h3>
         </div>
-        <LoginForm />
+          <LoginForm />
       </main>
     </div>
   )
