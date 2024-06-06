@@ -1,7 +1,8 @@
 html {
   font-size: 42.5%;
   background-color: #FFDDD2;
-  min-height: 100vh;
+  min-height: 100%;
+  margin:0;
 }
 
 body, header {
@@ -10,14 +11,18 @@ body, header {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+main {
+  min-height: 100vh;
+}
+
 /* Footer */
 footer {
   width: 100vw; /* Make sure the footer spans the full viewport width */
   background-color: #FFF1EE;
   padding: 1em 0; /* Add some padding to the footer */
-  position: relative; /* Ensure proper positioning */
+  position:relative; /* Ensure proper positioning */
   left: 50%; /* Move the footer to the middle */
-  right: 50%; /* Move the footer to the middle */
+  right: 50%;
   margin-left: -50vw; /* Adjust the left margin to ensure full width */
   margin-right: -50vw; /* Adjust the right margin to ensure full width */
 }
@@ -226,6 +231,7 @@ ul.login-nav-items li.register a {
 .login-image {
   flex: 1;
   position: relative;
+  left: 10%;
   width: 575px;
   height: 514px;
   z-index: 1;
@@ -234,9 +240,9 @@ ul.login-nav-items li.register a {
 
 .login-left h1 {
   line-height: 0.2em;
-  margin-top: 1.3em;
+  margin-top: 2em;
   color: #3a3a3a;
-  font-size: 8rem;
+  font-size: 10rem;
   font-weight: 600;
 }
 
@@ -249,8 +255,8 @@ ul.login-nav-items li.register a {
   flex-direction: column;
   align-items: center;
   padding: 10em 15em;
-  min-width: fit-content;
-  min-height: fit-content;
+  width: 450px;
+  height: 650px;
   background-color: #FFF1EE;
   border-radius: 3.8em;
   z-index: -1;
@@ -262,17 +268,19 @@ ul.login-nav-items li.register a {
   width: 150px;
   height: 150px;
   background: url('../public/paw2.png');
-  background-size: cover;
-  margin: auto;
+  background-size: contain;
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .login-logo h3 {
-  top:5em;
-  text-align: center;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #714949;
   margin: 0;
-  margin-bottom: 1em; /* Adjust margin to control spacing between h3 and logo */
+  white-space: nowrap;
+  margin-top: 30px;
 }
 
 form {
@@ -311,7 +319,7 @@ form label {
 }
 
 form input {
-  width: 20vw;
+  width: 300px;
   margin: 0.3em 0;
   font-size: 3.5rem;
   border-radius: 0.8rem;
@@ -528,12 +536,11 @@ form input {
     display: none;
   }
 
-  .login-right {
+  .login-right{
     position: relative;
+    width: fit-content;
+    height: fit-content;
     margin: auto;
-    display: block;
-    background-color: #FFF1EE;
-    border-radius: 3.8em;
   }
 
   .left {
@@ -587,14 +594,9 @@ form input {
     margin: 2em;
   }
 
-  form input {
-    width: 50vw;
-  }
-
   .footer-container, .footer-info{
     justify-content: space-evenly;
   }
-
 }
 
 @media only screen and (max-width: 630px) {
@@ -614,4 +616,16 @@ form input {
     display: none;
   }
 
+  .login-right{
+    font-size: 2rem;
+    position: relative;
+    width: fit-content;
+    height: min-content;
+    margin: auto;
+    padding: 10%;
+  }
+
+  form input {
+    width: 250px;
+  }
 }
