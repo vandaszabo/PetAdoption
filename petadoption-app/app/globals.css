@@ -376,40 +376,30 @@ form input {
   gap: 1em;
 }
 
-.all-avatar {
-  width: 40px;
-  height: 40px;
-  background: url('../public/cat-and-dog.jpg');
-  background-size: cover;
+
+.all-avatar, .cat-avatar, .dog-avatar{
+  width: 30px;
+  height: 30px;
   mix-blend-mode: normal;
   border-radius: 50%;
   flex: none;
   order: 0;
   flex-grow: 0;
+  
+  }
+  .all-avatar {
+    background: url('../public/cat-and-dog.jpg');
+    background-size: cover;
 }
 
 .cat-avatar {
-  width: 40px;
-  height: 40px;
   background: url('../public/cat2.jpg');
   background-size: cover;
-  mix-blend-mode: normal;
-  border-radius: 50%;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .dog-avatar {
-  width: 40px;
-  height: 40px;
   background: url('../public/dog2.jpg');
   background-size: cover;
-  mix-blend-mode: normal;
-  border-radius: 50%;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 /*Error message*/
@@ -515,6 +505,12 @@ form input {
   }
 }
 
+/*Pet Card*/
+.petCard {
+  color:#3a3a3a;
+  background-color: #FF7578;
+  border-radius: 12px;
+}
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 1200px) {
