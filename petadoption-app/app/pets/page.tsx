@@ -42,13 +42,13 @@ const PetsPage = () => {
   return (
     <div>
       <FilterBtns setType={() => setType} />
-            <ul>
+            <ul className='pets'>
                 {filteredPets?.map(pet => (
-                    <ul className='petCard'>
-                        <li key={pet.id}>
-                            {pet.name} ({pet.type})
+                        <li className='petCard'key={pet.id}>
+                          <div className='pet-image'></div>
+                            <h1>{pet.name}</h1> 
+                            <h2>{pet.breed}</h2>
                         </li>
-                    </ul>
                 ))}
             </ul>
             {message && <h1 className='petMessage'>{message}</h1>}
