@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import FilterBtns from '@/components/FilterBtns';
+import Image from 'next/image';
 
 interface Pet {
   id: string;
@@ -45,8 +46,11 @@ const PetsPage = () => {
             <ul className='pets'>
                 {filteredPets?.map(pet => (
                         <li className='petCard'key={pet.id}>
-                          <div className='pet-image'></div>
+                          <Image className='pet-image' src='/cat3.png' alt="pet" width={200} height={150}/>
+                          <div className='top'>
                             <h1>{pet.name}</h1> 
+                            <p>{pet.age} years</p>
+                          </div>
                             <h2>{pet.breed}</h2>
                         </li>
                 ))}
