@@ -37,7 +37,7 @@ const PetsPage = () => {
         }
         const petsData = await response.json();
         console.log(petsData);
-        if(petsData.length === 0){
+        if (petsData.length === 0) {
           setMessage("There is no available pet at the moment. Please visit later!")
         }
         setPets(petsData);
@@ -52,19 +52,24 @@ const PetsPage = () => {
   return (
     <div>
       <FilterBtns setType={setType} />
-            <ul className='pets'>
-                {filteredPets?.map(pet => (
-                        <li className='petCard'key={pet.id}>
-                          <Image className='pet-image' src='/cat3.png' alt="pet" width={200} height={150}/>
-                          <div className='top'>
-                            <h1>{pet.name}</h1> 
-                            <p>{pet.age} years</p>
-                          </div>
-                            <h2>{pet.breed}</h2>
-                        </li>
-                ))}
-            </ul>
-            {message && <h1 className='petMessage'>{message}</h1>}
+      <ul className='pets'>
+        {filteredPets?.map(pet => (
+          <li className='petCard' key={pet.id}>
+            {pet.type === 'cat' ?
+              <Image className='pet-image' src='/cat3.png' alt="pet" width={200} height={150} />
+              : pet.type === 'dog' ?
+                <Image className='pet-image' src='/dog3.png' alt="pet" width={200} height={150} />
+                :
+                <Image className='pet-image' src='/PawPrint2.png' alt="pet" width={200} height={150} />}
+            <div className='top'>
+              <h1>{pet.name}</h1>
+              <p>{pet.age} years</p>
+            </div>
+            <h2>{pet.breed}</h2>
+          </li>
+        ))}
+      </ul>
+      {message && <h1 className='petMessage'>{message}</h1>}
     </div>
   );
 };
