@@ -16,8 +16,17 @@ const PetsPage = () => {
   const [pets, setPets] = useState<Pet[]>([]);
   const [type, setType] = useState<'' | 'cat' | 'dog'>('');
   const [message, setMessage] = useState<string>('');
+  const [filteredPets, setFilteredPets] = useState<Pet[]>(pets);
 
-  const filteredPets = pets ? (type === '' ? pets : pets.filter(pet => pet.type === type)) : [];
+
+  useEffect(() => {
+    if (type === '') {
+      setFilteredPets(pets);
+    } else {
+      setFilteredPets(pets.filter(pet => pet.type === type));
+    }
+  }, [type, pets]);
+
 
   useEffect(() => {
     const fetchPetsData = async () => {
@@ -42,7 +51,7 @@ const PetsPage = () => {
 
   return (
     <div>
-      <FilterBtns setType={() => setType} />
+      <FilterBtns setType={setType} />
             <ul className='pets'>
                 {filteredPets?.map(pet => (
                         <li className='petCard'key={pet.id}>
