@@ -376,40 +376,30 @@ form input {
   gap: 1em;
 }
 
-.all-avatar {
-  width: 40px;
-  height: 40px;
-  background: url('../public/cat-and-dog.jpg');
-  background-size: cover;
+
+.all-avatar, .cat-avatar, .dog-avatar{
+  width: 30px;
+  height: 30px;
   mix-blend-mode: normal;
   border-radius: 50%;
   flex: none;
   order: 0;
   flex-grow: 0;
+  
+  }
+  .all-avatar {
+    background: url('../public/cat-and-dog.jpg');
+    background-size: cover;
 }
 
 .cat-avatar {
-  width: 40px;
-  height: 40px;
   background: url('../public/cat2.jpg');
   background-size: cover;
-  mix-blend-mode: normal;
-  border-radius: 50%;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .dog-avatar {
-  width: 40px;
-  height: 40px;
   background: url('../public/dog2.jpg');
   background-size: cover;
-  mix-blend-mode: normal;
-  border-radius: 50%;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 /*Error message*/
@@ -515,6 +505,55 @@ form input {
   }
 }
 
+/*Pets*/
+
+.pets{
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 45px; 
+  list-style-type: none;
+  margin: 60px;
+  padding: 0;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.pet-image{
+  border-radius: 16px;
+  margin:0;
+}
+
+.petCard {
+  color:#3a3a3a;
+  background-color: white;
+  border-radius: 16px;
+  width: 200px;
+  height: 230px;
+  justify-content:left;
+}
+
+.petCard h1 {
+  color:#757575;
+  font-weight: 100;
+  font-size: 4rem;
+  margin: 0 10px;
+}
+
+.petCard h2 {
+  color:#3a3a3a;
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 0 10px;
+}
+.petCard .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.petCard p {
+  margin: 10px;
+  font-size: 2.5rem;
+}
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 1200px) {
