@@ -1,22 +1,22 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/db';
 import bcrypt from 'bcryptjs';
+import { registerSchema, TSignUpSchema } from '@/schemas/registerSchema';
 
-type RegisterRequestBody = {
-  name: string;
-  email: string;
-  password: string;
-};
 
 export async function POST(req: Request) {
   try {
-    const body: RegisterRequestBody = await req.json();
-    const { name, email, password } = body;
+    const body: TSignUpSchema = await req.json();
 
-    if (!name || !email || !password) {
-      return NextResponse.json({ message: 'Missing name, email or password' }, { status: 400 });
+    // Validate the request body
+    const result = registerSchema.safeParse(body);
+
+    if (!result.success) {
+      return NextResponse.json({ message: 'Invalid input', errors: result.error.format() }, { status: 400 });
     }
 
+    const { name, email, password } = result.data;
+    
     // Check if user already exists
     const existingUser = await prisma.user.findUnique({
       where: { email },
