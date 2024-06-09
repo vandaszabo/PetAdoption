@@ -10,8 +10,10 @@ const Profile = () => {
     return (
         <div className='profile'>
             <div className='profile-left'>
-                {session?.user?.image &&
+                {session?.user?.image ?
                     <Image className='user-image' src={session?.user?.image as string} alt="user" width={100} height={100} />
+                    : 
+                    <Image className='user-image' src='/placeholder-profile.jpg' alt="user" width={100} height={100} />
                 }
                 <div>
                     <h2>{session?.user?.name}</h2>

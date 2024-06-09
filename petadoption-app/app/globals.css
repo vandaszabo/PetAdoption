@@ -150,30 +150,29 @@ ul.login-nav-items li.register a {
   color: #F2968F;
 }
 
-/*Advert*/
+/* Advert */
 .advert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .advert-image {
-  width: 136px;
-  height: 233px;
-  background: url('../public/PawPrint2.png');
-  background-size:contain;
-  margin: auto;
+  display: block;
 }
 
 .advert span {
-  margin: 1.7em 0;
   position: absolute;
   font-size: 3.5rem;
   font-weight: 600;
-  top: 39%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #714949;
   text-align: center;
 }
+
 
 /*Action Buttons*/
 .action-wrapper {
@@ -471,8 +470,8 @@ form input {
 .user-image {
   height: 100px;
   width: auto;
-  border: 5px solid #F2968F;
-  border-radius: 3.5em;
+  border: 3px solid #F2968F;
+  border-radius: 50em;
 }
 
 .profile,
