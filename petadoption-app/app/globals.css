@@ -230,11 +230,8 @@ ul.login-nav-items li.register a {
 .login-image {
   flex: 1;
   position: relative;
-  left: 10%;
-  width: 575px;
-  height: 514px;
+  left: 30%;
   z-index: 1;
-  background: url('../public/juicy-ai-person-detection-slash-face-id.png');
 }
 
 .login-left h1 {
@@ -254,8 +251,9 @@ ul.login-nav-items li.register a {
   flex-direction: column;
   align-items: center;
   padding: 10em 15em;
-  width: 450px;
-  height: 650px;
+  margin-right: 10%;
+  width: 350px;
+  height: 550px;
   background-color: #FFF1EE;
   border-radius: 3.8em;
   z-index: -1;
@@ -264,23 +262,23 @@ ul.login-nav-items li.register a {
 }
 
 .login-logo {
-  width: 150px;
-  height: 150px;
-  background: url('../public/paw2.png');
-  background-size: contain;
-  margin: 0;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .login-logo h3 {
-  font-size: 3.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   color: #714949;
-  margin: 0;
+  font-size: 3.5rem;
   white-space: nowrap;
-  margin-top: 30px;
+  text-align: center;
 }
+
 
 form {
   width: fit-content;
@@ -308,6 +306,11 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.btn-container h1 {
+  color:#FA8C01;
+  font-size: 2.5rem;
 }
 
 form label {
@@ -579,6 +582,7 @@ form input {
     width: fit-content;
     height: fit-content;
     margin: auto;
+    margin-top:0;
   }
 
   .left {
@@ -661,6 +665,7 @@ form input {
     height: min-content;
     margin: auto;
     padding: 10%;
+    margin-top:0;
   }
 
   form input {
