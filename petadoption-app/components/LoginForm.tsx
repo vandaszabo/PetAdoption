@@ -1,15 +1,17 @@
 'use client'
-import React, { useState, FormEvent, ChangeEvent } from 'react';
+import React, { useState, FormEvent, ChangeEvent, useEffect } from 'react';
 import RedirectBtn from './RedirectBtn';
 import SignInWithGoogleButton from './SignInWithGoogleBtn';
 import { useRouter } from 'next/navigation';
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 
 const LoginForm: React.FC = () => {
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+
+  const { data: session } = useSession();
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setEmail(e.target.value);
@@ -26,12 +28,16 @@ const LoginForm: React.FC = () => {
       password: password,
       redirect: false
     });
-    if (signInResponse && !signInResponse.error) {
-      router.push('/')
-    } else {
+    if (signInResponse && signInResponse.error) {
       setError("Invalid email or password");
     }
   };
+
+  useEffect(() => {
+    if (session?.user?.role === 'admin') {
+      router.push('/admin')
+    }
+  }, [session, session?.user, session?.user.role])
 
   return (
     <form onSubmit={handleSubmit}>

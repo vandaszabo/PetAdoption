@@ -1,26 +1,37 @@
 import db from '@/lib/db';
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getSession } from "next-auth/react";
+import { NextApiRequest } from 'next';
+import { getSession } from 'next-auth/react';
+import { NextResponse } from 'next/server';
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
-    const session = await getSession({ req });
+export async function POST(req: NextApiRequest) {
+    const body = await req.body.json();
 
-    // Check if the user is an admin
-    if (!session || session.user.role !== 'admin') {
-        return res.status(403).json({ message: 'Access denied' });
+    // Extract the token from the Authorization header
+    const authHeader = req.headers.authorization;
+    const session = await getSession({req});
+
+    if (!session) {
+        return NextResponse.json({ message: 'No user session' }, { status: 404 });
     }
 
-    const { userId }: { userId: string } = req.body;
+    // Check if the user is an admin
+    if (session.user.role !== 'admin') {
+        return NextResponse.json({ message: 'Access denied' }, { status: 403 });
+    }
+
+
+    const { userId }: { userId: string } = body;
 
     // Find the user and update their role
     try {
+
         const user = await db.user.update({
             where: { id: userId },
             data: { role: 'admin' },
         });
-        return res.status(200).json({ message: 'User promoted to admin successfully', user });
+        return NextResponse.json({ message: 'User promoted to admin successfully', user }, { status: 200 });
     } catch (error) {
-        return res.status(404).json({ message: 'User not found' });
+        return NextResponse.json({ message: 'User not found' }, { status: 404 });
     }
-}
 
+}

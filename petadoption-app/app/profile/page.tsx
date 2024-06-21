@@ -18,6 +18,7 @@ const Profile = () => {
                 <div>
                     <h2>{session?.user?.name}</h2>
                     <h3>{session?.user?.email}</h3>
+                    <h3>{session?.user?.role}</h3>
                 </div>
             </div>
             <Logout />
