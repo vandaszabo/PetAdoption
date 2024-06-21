@@ -12,4 +12,12 @@ declare module "next-auth" {
     id: string;
     role: string;
   }
+
+  interface Pet {
+    type: string,
+    name: string,
+    breed: string | null,
+    age: number,
+    isMale: boolean
+  }
 }

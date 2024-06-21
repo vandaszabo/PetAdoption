@@ -2,10 +2,11 @@ html {
   font-size: 42.5%;
   background-color: #FFDDD2;
   min-height: 100%;
-  margin:0;
+  margin: 0;
 }
 
-body, header {
+body,
+header {
   margin: auto;
   max-width: 1200px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -17,14 +18,20 @@ main {
 
 /* Footer */
 footer {
-  width: 100vw; /* Make sure the footer spans the full viewport width */
+  width: 100vw;
+  /* Make sure the footer spans the full viewport width */
   background-color: #FFF1EE;
-  padding: 1em 0; /* Add some padding to the footer */
-  position:relative; /* Ensure proper positioning */
-  left: 50%; /* Move the footer to the middle */
+  padding: 1em 0;
+  /* Add some padding to the footer */
+  position: relative;
+  /* Ensure proper positioning */
+  left: 50%;
+  /* Move the footer to the middle */
   right: 50%;
-  margin-left: -50vw; /* Adjust the left margin to ensure full width */
-  margin-right: -50vw; /* Adjust the right margin to ensure full width */
+  margin-left: -50vw;
+  /* Adjust the left margin to ensure full width */
+  margin-right: -50vw;
+  /* Adjust the right margin to ensure full width */
 }
 
 .footer-wrapper {
@@ -37,11 +44,14 @@ footer {
   display: block;
 }
 
-.footer-container, .footer-info {
+.footer-container,
+.footer-info {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px; /* Constrain the maximum width of the content */
-  margin: auto; /* Center the content within the footer */
+  max-width: 1200px;
+  /* Constrain the maximum width of the content */
+  margin: auto;
+  /* Center the content within the footer */
 }
 
 footer strong {
@@ -53,7 +63,10 @@ footer span {
   font-weight: 600;
 }
 
-.email, .community-icons, .footer-info-right, .left-footer {
+.email,
+.community-icons,
+.footer-info-right,
+.left-footer {
   display: flex;
   align-items: center;
   gap: 1em;
@@ -190,7 +203,7 @@ ul.login-nav-items li.register a {
   height: 200px;
   border-radius: 3.5em;
   align-items: center;
-  display: block; 
+  display: block;
   padding-top: 2em;
 }
 
@@ -204,7 +217,7 @@ ul.login-nav-items li.register a {
   color: #714949;
 }
 
-.action-btn-card img{
+.action-btn-card img {
   height: 80px;
   width: auto;
 }
@@ -309,13 +322,13 @@ form {
 }
 
 .btn-container h1 {
-  color:#FA8C01;
+  color: #FA8C01;
   font-size: 2.5rem;
 }
 
 form label {
   display: block;
-  
+
   font-size: 2.6rem;
   color: rgba(0, 0, 0, 0.40);
 }
@@ -379,7 +392,9 @@ form input {
 }
 
 
-.all-avatar, .cat-avatar, .dog-avatar{
+.all-avatar,
+.cat-avatar,
+.dog-avatar {
   width: 30px;
   height: 30px;
   mix-blend-mode: normal;
@@ -387,11 +402,12 @@ form input {
   flex: none;
   order: 0;
   flex-grow: 0;
-  
-  }
-  .all-avatar {
-    background: url('../public/cat-and-dog.jpg');
-    background-size: cover;
+
+}
+
+.all-avatar {
+  background: url('../public/cat-and-dog.jpg');
+  background-size: cover;
 }
 
 .cat-avatar {
@@ -509,44 +525,45 @@ form input {
 
 /*Pets*/
 
-.pets{
+.pets {
   display: grid;
   grid-column-gap: 20px;
-  grid-row-gap: 45px; 
+  grid-row-gap: 45px;
   list-style-type: none;
   margin: 60px;
   padding: 0;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-.pet-image{
+.pet-image {
   border-radius: 16px;
-  margin:0;
+  margin: 0;
 }
 
 .petCard {
-  color:#3a3a3a;
+  color: #3a3a3a;
   background-color: white;
   border-radius: 16px;
   width: 200px;
   height: 230px;
-  justify-content:left;
+  justify-content: left;
 }
 
 .petCard h1 {
-  color:#757575;
+  color: #757575;
   font-weight: 100;
   font-size: 4rem;
   margin: 0 10px;
 }
 
 .petCard h2 {
-  color:#3a3a3a;
+  color: #3a3a3a;
   font-weight: 400;
   font-size: 3rem;
   margin: 0 10px;
 }
-.petCard .top{
+
+.petCard .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -556,6 +573,28 @@ form input {
   margin: 10px;
   font-size: 2.5rem;
 }
+
+
+/*Admin*/
+.admin-page {
+  background-color: #757575;
+  min-height: 100vh;
+  color: #FFDDD2;
+  font-weight: 100;
+}
+
+.admin-page h1 {
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+.admin-page h2 {
+  color:white;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 1200px) {
@@ -577,12 +616,12 @@ form input {
     display: none;
   }
 
-  .login-right{
+  .login-right {
     position: relative;
     width: fit-content;
     height: fit-content;
     margin: auto;
-    margin-top:0;
+    margin-top: 0;
   }
 
   .left {
@@ -636,7 +675,8 @@ form input {
     margin: 2em;
   }
 
-  .footer-container, .footer-info{
+  .footer-container,
+  .footer-info {
     justify-content: space-evenly;
   }
 }
@@ -658,14 +698,14 @@ form input {
     display: none;
   }
 
-  .login-right{
+  .login-right {
     font-size: 2rem;
     position: relative;
     width: fit-content;
     height: min-content;
     margin: auto;
     padding: 10%;
-    margin-top:0;
+    margin-top: 0;
   }
 
   form input {
