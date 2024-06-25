@@ -577,7 +577,8 @@ form input {
 
 /*Admin*/
 .admin-page {
-  background-color: #757575;
+  background-color: #7575757f;
+  border-radius: 3em;
   min-height: 100vh;
   color: #FFDDD2;
   font-weight: 100;
@@ -586,13 +587,40 @@ form input {
 .admin-page h1 {
   font-size: 4rem;
   font-weight: 100;
+  text-align: center;
 }
 
-.admin-page h2 {
-  color:white;
+.register-pet, .pet-table {
+  margin:3em;
+  padding: 3em;
+  border: 1px solid #714949;
+  width: fit-content;
+  border-radius: 3em;
+}
+
+.register-pet button {
+  text-transform: uppercase;
+  margin-top:1em;
+  padding: 0.5em 2em;
+}
+
+.register-pet h2, .pet-table h2 {
+  margin:0;
+  text-align: center;
+  color:black;
   text-transform: uppercase;
   font-size: 3rem;
   font-weight: 100;
+}
+
+.register-pet select {
+  width: 100%;
+  height: 35px;
+  border-radius: 8px;
+}
+
+.task.container {
+  display: flex;
 }
 
 .admin-promotion {
@@ -601,6 +629,31 @@ form input {
 
 .register-pet label{
   color:white;
+}
+
+table {
+  width: 100%;
+  font-size: 3rem;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr {
+  background-color: #71494947;
+  color: black;
 }
 
 

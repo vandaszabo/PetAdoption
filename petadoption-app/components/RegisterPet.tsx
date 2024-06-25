@@ -17,8 +17,10 @@ const RegisterPet = () => {
 
   const handleChange = (field: keyof Pet) => (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
     let value: any;
-    if (e.target.type === 'checkbox') {
-      value = (e.target as HTMLInputElement).checked;
+    if (e.target.value === 'true'){
+      value = true;
+    } else if (e.target.value === 'false'){
+      value = false;
     } else if (e.target.type === 'select-one' && field === 'age') {
       value = Number(e.target.value); // Convert to number
     } else {
@@ -47,54 +49,54 @@ const RegisterPet = () => {
       }
       setCreated(true);
     } catch (error: any) {
-        setError(error.message);
+      setError(error.message);
     }
   };
 
   return (
     <div className='register-pet'>
+      <h2>Register new pet</h2>
       <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name</label>
-      <input
-        type="text"
-        id="name"
-        value={newPet.name}
-        onChange={handleChange('name')}
-      />
+        <label htmlFor="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          value={newPet.name}
+          onChange={handleChange('name')}
+        />
 
-      <label htmlFor="type">Type</label>
-      <select id="type" value={newPet.type} onChange={handleChange('type')}>
-        <option value="">Select Type</option>
-        <option value="cat">Cat</option>
-        <option value="dog">Dog</option>
-      </select>
+        <label htmlFor="type">Type</label>
+        <select id="type" value={newPet.type} onChange={handleChange('type')}>
+          <option value="">Select Type</option>
+          <option value="cat">Cat</option>
+          <option value="dog">Dog</option>
+        </select>
 
-      {/* <label htmlFor="breed">Breed</label>
-      <input
-        type="text"
-        id="breed"
-        value={newPet.breed}
-        onChange={handleChange('breed')}
-      /> */}
+        <label htmlFor="breed">Breed</label>
+        <input
+          type="text"
+          id="breed"
+          value={newPet.breed ? newPet.breed : ''}
+          onChange={handleChange('breed')}
+        />
 
-      <label htmlFor="isMale">Male</label>
-      <input
-        type="checkbox"
-        id="isMale"
-        checked={newPet.isMale}
-        onChange={handleChange('isMale')}
-      />
+        <label htmlFor="isMale">Gender</label>
+        <select id="isMale" value={newPet.type} onChange={handleChange('isMale')}>
+          <option value="">Select Gender</option>
+          <option value="false">Female</option>
+          <option value="true">Male</option>
+        </select>
 
-      <label htmlFor="age">Age</label>
-      <select id="age" value={newPet.age} onChange={handleChange('age')}>
-        {Array.from({ length: 11 }, (_, i) => (
-          <option key={i} value={i}>{i}</option>
-        ))}
-      </select>
-      {error && <div className="error">{error}</div>}
-      {created && <div className='message'>New pet successfully added.</div>}
-      <button className='create' type="submit">Create</button>
-    </form>
+        <label htmlFor="age">Age</label>
+        <select id="age" value={newPet.age} onChange={handleChange('age')}>
+          {Array.from({ length: 11 }, (_, i) => (
+            <option key={i} value={i}>{i}</option>
+          ))}
+        </select>
+        {error && <div className="error">{error}</div>}
+        {created && <div className='message'>New pet successfully added.</div>}
+        <button className='create' type="submit">Create</button>
+      </form>
     </div>
   );
 }
