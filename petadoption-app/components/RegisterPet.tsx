@@ -52,7 +52,7 @@ const RegisterPet = () => {
   };
 
   return (
-    <div>
+    <div className='register-pet'>
       <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name</label>
       <input

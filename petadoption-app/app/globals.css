@@ -595,6 +595,14 @@ form input {
   font-weight: 100;
 }
 
+.admin-promotion {
+  color:white;
+}
+
+.register-pet label{
+  color:white;
+}
+
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 1200px) {
